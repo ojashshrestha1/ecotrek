@@ -1,0 +1,537 @@
+{% extends 'main_base.html' %}
+{% load static %}
+{% block content %}
+            
+            <!-- Section -->
+            <section class="page-section">
+                <div class="container relative">
+                    
+                    <div class="row">
+                        
+                        <!-- Content -->
+                        <div class="col-sm-10 col-sm-offset-1">
+                            
+                            <!-- Post -->
+                            <div class="blog-item mb-80 mb-xs-40">
+                                
+                                <!-- Text -->
+    							<div class="blog-item-body">
+    							    
+                                    <h1 class="mt-0 font-alt">Hotel Reservation in Nepal</h1>
+                                
+                                    <!-- Media Gallery -->
+                                    <div class="blog-media mt-40 mb-40 mb-xs-30">
+                                        <img src="{% static 'images/hotel-reservation-large.jpg' %}" alt="Hotel Reservation in Nepal" />
+                                    </div>
+    								
+
+                                    <p>
+                                        Ecological Treks and Tour offers the best prices for hotels in Nepal, We do reservation of all major hotels in Kathmandu, Pokhara, Nagarkot, Chitwan, Dhulikhel, and other popular destinations in Nepal. These hotels include tourist standard guest houses, one to five star deluxe hotels, and resorts at various destinations. We offer Nepal Hotel Reservation & discounted hotel bookings for luxury resorts, Guest houses, Lodges and hotels in Nepal! Enjoy the world class hospitality of luxury hotels in Nepal.
+
+
+                                    </p>
+
+                                    <p>
+                                        The luxury hotels in Nepal offer world class comfort living to its visitors. The comfortable hotels in Nepal are an excellent opportunity to unwind. The incomparable land of Nepal is dotted with picturesque cities showcasing legacies of historical relevance and visiting values. The traditional feel of the hotels in Nepal adds to excitement of visiting the country. We'll arrange any category of hotel on your request. Every new reservation included FREE Airport pickup service. Get easy online hotel reservation in Nepal and discounted hotel bookings in Nepal at the best rates with us!
+
+                                    </p>
+
+                                    <p>
+                                        Note: Please inform your flight schedule and your name in advance, we'll be standing by in arrival gate with your name in our company sign board.
+
+                                    </p>
+
+                                    <div class="section1"><h3>List of Hotels</h3><table cellpadding="0" cellspacing="1" border="0" width="100%">
+  <tbody>
+    <tr>
+      <th>S.N</th>
+      <th>HOTEL NAME</th>
+      <th>ADDRESS</th>
+      <th width="70">Reservation</th>
+    </tr>
+    <tr>
+      <td colspan="4"><h2>Kathmandu Five Stars (*****)</h2></td>
+    </tr>
+    {% for obj in obj_list%}
+    <tr>
+      <td>{{obj.id}}</td>
+      <td>{{obj.HotelName}}</td>
+      <td>{{obj.Address}}</td>
+      <td><a class="more" href="/hotel/reservation/{{obj.id}}/">Book Now</a></td>
+    </tr>
+    {%endfor%}
+    <!-- <tr>
+      <td>2</td>
+      <td>Hotel de'l Annapurna</td>
+      <td>Durbar Marg</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel de'l Annapurna">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Hotel Yak and Yeti</td>
+      <td>Durbar Marg</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Yak and Yeti">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Hyatt Regency</td>
+      <td>Boudha</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hyatt Regency">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Le Meridien</td>
+      <td>Gokarna, Thali</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Le Meridien">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Radission Hotel</td>
+      <td>Lazimpat</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Radission Hotel">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Shangrila Hotel</td>
+      <td>Lazimpat</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Shangrila Hotel">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Soaltee Crown Plaza</td>
+      <td>Tahachal</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Soaltee Crown Plaza">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Malla Hotel</td>
+      <td>Lekhnath Marg</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Malla Hotel">Book Now</a></td>
+    </tr>
+    <tr>
+      <td colspan="4"><h2>Kathmandu Four Stars (****)</h2></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Durbar Hotel</td>
+      <td>Lal Durbar</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Durbar Hotel">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Dynasty Woodland Plaza</td>
+      <td>Durbar Marg</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Dynasty Woodland Plaza">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Grand Hotel</td>
+      <td>Soaltee Mode</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Grand Hotel">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Hotel Himalaya</td>
+      <td>Kupondole</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Himalaya">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Hotel Shankar</td>
+      <td>Lazimpat</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Shankar">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Hotel Sherpa</td>
+      <td>Durbar Marg</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Sherpa">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Hotel Vaishali</td>
+      <td>Thamel</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Vaishali">Book Now</a></td>
+    </tr>
+    <tr>
+      <td colspan="4"><h2>Kathmandu Three Stars (***)</h2></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Hotel Center Point</td>
+      <td>Thamel</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Center Point">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Hotel Classic</td>
+      <td>Newroad</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Classic">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Hotel Gangjong</td>
+      <td>Lazimpat</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Gangjong">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Hotel Harati</td>
+      <td>Chhetrapati</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Harati">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Hotel Manang</td>
+      <td>Thamel</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Manang">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Hotel Marshyangdi</td>
+      <td>Thamel</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Marshyangdi">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Hotel Mountain</td>
+      <td>Kantipath</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Mountain">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Hotel Tibet</td>
+      <td>Lazimpat</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Tibet">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Kathmandu Guest House</td>
+      <td>Thamel</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Kathmandu Guest House">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Marcopolo Business Hotel</td>
+      <td>Kamalpokhari</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Marcopolo Business Hotel">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Royal Singi Hotel</td>
+      <td>Teendhara Marg</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Royal Singi Hotel">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Summit Hotel</td>
+      <td>Kupondole</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Summit Hotel">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>The Garden Hotel</td>
+      <td>Naya Bazaar</td>
+      <td><a class="more" href="hotel-booking.html?hotel=The Garden Hotel">Book Now</a></td>
+    </tr>
+    <tr>
+      <td colspan="4"><h2>Kathmandu Two Stars (**)</h2></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Aloha Inn</td>
+      <td>Jawalakhel</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Aloha Inn">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Hotel Ambassador</td>
+      <td>Lazimpat</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Ambassador">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Hotel Blue Diamond</td>
+      <td>Jyatha</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Blue Diamond">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Hotel Gautam</td>
+      <td>Jyatha</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Gautam">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Hotel Kamal</td>
+      <td>Kamalpokhari</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Kamal">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Hotel Karnali</td>
+      <td>Maharjgunj</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Karnali">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Hotel Kido House</td>
+      <td>Thapathali</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Kido House">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Hotel Lion</td>
+      <td>Lazimpat</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Lion">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Hotel Manaslu</td>
+      <td>Lazimpat</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Manaslu">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Hotel Mandap</td>
+      <td>Thamel</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Mandap">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Hotel Mount Hotel</td>
+      <td>Newroad</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Mount Hotel">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Hotel Nepa International</td>
+      <td>Jyatha</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Nepa International">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Hotel Norbu Linka</td>
+      <td>Thamel</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Norbu Linka">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>Hotel Orchid</td>
+      <td>Tripureshwor</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Orchid">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>Hotel Paradise Plaza</td>
+      <td>Jyatha</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Paradise Plaza">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>Hotel Rara</td>
+      <td>Jyatha</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Rara">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>Hotel Sunset View</td>
+      <td>New Baneshwor</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Sunset View">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>Hotel Tayoma</td>
+      <td>Thamel</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Tayoma">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>Hotel Thamel</td>
+      <td>Thamel</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Thamel">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>Hotel Utse</td>
+      <td>Jaytha</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Utse">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>Hotel Vajra</td>
+      <td>Bijeshwori</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Vajra">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>Hotel Zenith</td>
+      <td>Chakupat</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Zenith">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>Int'l Guest House</td>
+      <td>Kaldhara</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Int'l Guest House">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>Tibet Guest House</td>
+      <td>&nbsp;</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Tibet Guest House">Book Now</a></td>
+    </tr>
+    <tr>
+      <td colspan="4"><h2>Kathmandu One Stars (*)</h2></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Amar's Hotel</td>
+      <td>Tahachal</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Amar's Hotel">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Greenwich Hotel</td>
+      <td>Kupondole</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Greenwich Hotel">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Hotel Buddha</td>
+      <td>Thamel</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Buddha">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Hotel Excelsior</td>
+      <td>Thamel</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Excelsior">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Hotel Ganesh Himal</td>
+      <td>Chhetrapati</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Ganesh Himal">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Hotel Garuda</td>
+      <td>Thamel</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Garuda">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Hotel Himalayan View</td>
+      <td>Jyatha</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Himalayan View">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Hotel Impala</td>
+      <td>Thamel</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Impala">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Hotel Kohinoor</td>
+      <td>Kantipath</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Kohinoor">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Hotel Marshyangdi Mandala</td>
+      <td>Chhetrapati</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Marshyangdi Mandala">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Hotel Melugtse</td>
+      <td>Maharajgunj</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Melugtse">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Hotel Microne</td>
+      <td>Thamel</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Microne">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Hotel Pisang</td>
+      <td>Thamel</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Pisang">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>Hotel Shakti</td>
+      <td>Thamel</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Shakti">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>Hotel Shree Tibet</td>
+      <td>Thamel</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Shree Tibet">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>Hotel Star</td>
+      <td>Thamel</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Star">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>Hotel Valley view</td>
+      <td>Teku</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Hotel Valley view">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>Pancha Pandav G. House</td>
+      <td>Newroad</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Pancha Pandav G. House">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>Park Village Guest House</td>
+      <td>Budhanilkantha</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Park Village Guest House">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>Thorong Peak G. House</td>
+      <td>Thamel</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Thorong Peak G. House">Book Now</a></td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>Welcome Guest House</td>
+      <td>New Baneshwor</td>
+      <td><a class="more" href="hotel-booking.html?hotel=Welcome Guest House">Book Now</a></td>
+    </tr> -->
+  </tbody>
+</table></div><div class="clear"><br /></div>
+
+    								
+    								
+                                    
+                                    
+    							</div>
+                                <!-- End Text -->
+    							
+    						</div>
+    						
+                            
+                        </div>
+                        <!-- End Content -->
+                        
+                    </div>
+                    
+                </div>
+            </section>
+            <!-- End Section -->
+{%endblock%}
+            
+            
+           

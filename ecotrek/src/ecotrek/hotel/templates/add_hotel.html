@@ -1,0 +1,15 @@
+{% extends 'admin/base_site.html'%}
+{%block body%}
+    <section class="page-section">
+         <form class="form contact-form" method="POST">{%csrf_token%}    
+         	<div class="form-control"> Hotel Name: </div> 
+            <input type="text" name="HotelName" class="input-md form-control" placeholder="Name of Hotel" maxlength="100" required><br>
+            <div class="form-control"> Hotel Stars: </div> 
+            <input type="number" min="1" max="7" name="HotelStars" class="input-md form-control" placeholder="Hotel Stars" max="100" required><br>
+            <div class="form-control"> Address: </div> 
+            <input type="text" name="Address" class="input-md form-control" placeholder="Address" maxlength="100" required><br>
+            <button class="submit_btn btn btn-mod btn-medium btn-round btn-full" >Submit</button>
+        </form>
+    </section> 
+{%endblock%}
+            

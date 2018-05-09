@@ -1,0 +1,19 @@
+{% extends 'admin/base_site.html'%}
+{%block body%}
+
+<div class="container-fluid">
+	<h3>Reservation Information</h3>	
+	<div>
+		<b>	Hotel Name: </b><span>{{obj_list.HotelName}}</span>
+	</div><br>	
+	<div>
+		<b>	Hotel Stars: </b><span>{{obj_list.HotelStars}}</span>
+	</div><br>
+	<div>
+		<b>	Address: </b><span>{{obj_list.Address}}</span>
+	</div><br>
+</div>
+
+{%endblock%}
+
+

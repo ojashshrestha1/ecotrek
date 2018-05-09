@@ -1,0 +1,89 @@
+{% extends 'admin/base_site.html'%}
+{%block body%}
+
+<div class="container-fluid">
+
+	<h3>Reservation Information</h3>	
+	<div class="panel panel-info">
+      <div class="panel-heading">Hotel Name</div>
+      <div class="panel-body">{{obj_list.hotel}}</div>
+    </div>
+
+    <div class="panel panel-info">
+      <div class="panel-heading">Personal Information</div>
+      <div class="panel-body">
+      	<div>
+			<b>	Name of person: </b><span>{{obj_list.full_name}}</span>
+		</div><br>
+		<div>
+			<b>	address: </b><span>{{obj_list.address}}</span>
+		</div><br>
+		<div>
+			<b>	Email-Id: </b><span>{{obj_list.email}}</span>
+		</div><br>
+
+		<div>
+			<b>	Phone no.: </b><span>{{obj_list.phone}}</span>
+		</div><br>
+
+
+
+      </div>
+    </div>
+
+    <div class="panel panel-info">
+      <div class="panel-heading" > Hotel Reservation Information</div>
+      <div class="panel-body">
+		    <h4>No. of Persons</h4> 	
+			<div>
+				<span class="no-of-person">
+					<b>	No of adults: </b><span>{{obj_list.adults}}</span>
+				</span>
+				<span class="no-of-person">
+					<b>	No of children: </b><span>{{obj_list.child}}</span>
+				</span>
+			</div><br>
+
+			<h4>Reservation Dates</h4>
+			<div>
+				<span class="dates">
+					<b>	Check in date: </b><span>{{obj_list.check_in_date}}</span>
+				</span>
+				<span class="dates">
+					<b>	Check out date: </b><span>{{obj_list.check_out_date}}</span>
+				</span>
+			</div><br>
+			
+			<h4>Room Information</h4>
+			<div>
+				<span class="room-info">
+					<b>	No. of single room: </b><span>{{obj_list.single_room}}</span>
+				</span>
+
+				<span class="room-info">
+					<b>	No. of double room: </b><span>{{obj_list.double_room}}</span>
+				</span>
+				<span class="room-info">
+					<b>No. of extra bed: </b><span>{{obj_list.extra_bed}}</span>
+				</span><br>
+				<p>
+				<b>	Accomodation type: </b><span>{{obj_list.accomodation_type}}</span>
+				</p>
+				
+			</div><br>
+			
+			<h4>Others</h4>
+			
+			
+			<div>
+				<b>	Other specified: </b><span>{{obj_list.message}}</span>
+			</div><br>
+		      </div>
+		    </div>
+		
+
+</div>
+
+
+
+{%endblock%}

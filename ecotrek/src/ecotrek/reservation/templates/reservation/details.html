@@ -1,0 +1,42 @@
+{% extends 'admin/base_site.html'%}
+{%block body%}
+
+<div class="container-fluid">
+	<h3>Reservation Information</h3>	
+		<div>
+		<b>	Full Name: </b><span>{{obj_list.Full_Name}}</span>
+	</div><br>	
+
+	<div>
+		<b>	Email: </b><span>{{obj_list.Email}}</span>
+	</div><br>
+	<div>
+		<b>	Inquiry for: </b><span>{{obj_list.Inquiry_for}}</span>
+	</div><br>
+	<div>
+		<b>	No of persons: </b><span>{{obj_list.No_of_persons}}</span>
+	</div><br>
+	<div>
+		<b>	Address: </b><span>{{obj_list.Address}}</span>
+	</div><br>
+	<div>
+		<b>	Country: </b><span>{{obj_list.Country}}</span>
+	</div><br>
+	<div>
+		<b>	Contact No: </b><span>{{obj_list.Phone_no}}</span>
+	</div><br>
+	<div>
+		<b>	Arrival Date: </b><span>{{obj_list.Arrival_date}}</span>
+	</div><br>
+	<div>
+		<b>	Departure Date: </b><span>{{obj_list.Departure_date}}</span>
+	</div><br>
+	<div>
+		<b>	Other Specify: </b><span>{{obj_list.Other_specify}}</span>
+	</div><br>
+</div>
+
+
+{%endblock%}
+
+

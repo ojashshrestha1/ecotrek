@@ -1,0 +1,17 @@
+{% extends 'admin/base_site.html'%}
+{%block body%}
+            
+    <section class="page-section">
+             <form class="form contact-form" method="POST">{%csrf_token%}    
+             	<div class="form-control"> Hotel Name: </div> 
+                <input type="text" name="HotelName" class="input-md form-control" placeholder="{{ obj_list.HotelName }}" maxlength="100" value="{{ obj_list.HotelName }}"><br>
+                <div class="form-control"> Hotel Stars: </div> 
+                <input type="number" min="0" max="7" name="HotelStars" class="input-md form-control" placeholder="{{ obj_list.HotelStars }}" max="100"><br>
+                <div class="form-control"> Address: </div> 
+                <input type="text" name="Address" class="input-md form-control" placeholder="{{ obj_list.Address }}" maxlength="100"><br>
+                <button class="submit_btn btn btn-mod btn-medium btn-round btn-full" >Submit</button>                                        
+            </form>
+                                    
+
+    </section> 
+{%endblock%}

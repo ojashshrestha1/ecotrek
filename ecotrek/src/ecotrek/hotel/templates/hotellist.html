@@ -1,0 +1,47 @@
+{%extends 'admin/base_site.html'%}
+{%block body%}
+
+<div class="portlet box blue">
+    <div class="portlet-title">
+
+        <div class="caption">           <i class="icon-globe"></i><h3>Hotel List</h3>   </div>
+    </div>
+
+    <div class="portlet-body">
+        <table class="table table-striped table-bordered table-hover table-full-width" id="sample_2">
+            <thead>
+                <tr>
+                    <!--<th>Photo</th>-->
+                    <th>S.N.</th>
+                    <th>Hotel Name</th>
+                    <th>Hotel Star</th>
+                    <th>Address</th>
+                    <th>View</th>
+                    <th>Edit Hotel</th>
+                    <th>DELETE</th>
+                </tr>
+            </thead>
+                {% for obj in obj_list %}
+                <tbody>
+                         <tr>
+                          
+                            <td>{{forloop.counter}}</td>
+
+                            <td><a href="/hotel/hoteldetails/{{obj.id}}">{{obj.HotelName}}</a></td>
+                            <td>{{obj.HotelStars}}</td>
+                            <td>{{obj.Address}}</td>
+                            <td><a class="btn mini red-stripe" href="/hotel/hoteldetails/{{obj.id}}">View</a></td>
+                            <td><a class="btn mini red-stripe" href="/hotel/hoteldetails/{{obj.id}}/edit/">Edit Hotel</a></td>
+                            <td><a class="btn mini red-stripe" href="/hotel/hoteldetails/{{obj.id}}/delete/">Delete Hotel</a></td>
+                        </tr>
+                                       
+                 </tbody>
+        
+                {% endfor %}
+                                   
+        </table>
+    </div>
+</div>
+
+
+{%endblock%}

@@ -1,0 +1,68 @@
+{% extends 'main_base.html' %}
+{% load static%}
+{% block content %}
+	
+	<!-- Head Section -->
+            <section class="page-section ">
+                <div class="relative container ">
+                    
+                    <h1 class="hs-line-11 font-alt mb-20 mb-xs-0">Contact Us</h1>
+                    <div class="section-text mb-50 mb-sm-20">
+                        <div class="row">
+                        
+                            <div class="col-md-7 mb-sm-40">
+                            
+                                <!-- Gallery -->
+                                <div class="work-full-media mt-0 white-shadow">
+                                    <ul class="clearlist work-full-slider owl-carousel">
+                                        <li>
+                                            <img src='{% static "images/admin3.jpg" %}' alt="" />
+                                        </li>
+                                        <li>
+                                            <img src='{% static "images/admin2.jpg" %}' alt="" />
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- End Gallery -->
+                            
+                            </div>
+                            
+                            
+                            
+                            
+                        </div>
+                    </div>
+
+                    <div class="section1"><p><b>Ecological Treks Pvt. Ltd.</b></p><p>P.O.Box: 21856, Paryatan Marg, Thamel</p><p>Kathmandu, Nepal</p><p>Phone no.: +977-14701674</p><p>Fax no.: +977-14700154</p><p>Mobile: +977-98510-31179 (Ramesh Dhamala), +977-98510-33447 (Rakesh Dhamala)</p><p>E-mail: het@mos.com.np                                       </p></div>
+                    
+                </div>
+            </section>
+            <!-- End Head Section -->
+            
+            
+            
+            <!-- Google Map -->
+            <div class="google-map">
+                
+                <div data-address="Ecological Treks & Tours Pvt Ltd Paryatan Marg, Kathmandu 44600" id="map-canvas">
+                </div>
+                
+                <div class="map-section">
+                    
+                    <div class="map-toggle">
+                        <div class="mt-icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <div class="mt-text font-alt">
+                            <div class="mt-open">Open the map <i class="fa fa-angle-down"></i></div>
+                            <div class="mt-close">Close the map <i class="fa fa-angle-up"></i></div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <!-- End Google Map -->
+
+
+{%endblock%}
